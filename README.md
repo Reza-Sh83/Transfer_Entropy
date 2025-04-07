@@ -20,23 +20,6 @@ In financial systems, understanding not just the correlation but the **direction
 
 ---
 
-## 📁 Folder Structure
-
-```
-project/
-├── Transfer_Entropy_S&P500.py
-└── Data/
-    └── Sector1/
-        └── CompanyA.csv
-        └── CompanyB.csv
-    └── Sector2/
-        └── CompanyC.csv
-```
-
-Each CSV must contain at least: `Date`, `Open`, and `Close` columns.
-
----
-
 ## 📆 Requirements
 
 - Python 3.x
@@ -61,7 +44,7 @@ pip install numpy pandas matplotlib tabulate
 2. **Set parameters**  
    In the script, modify:
    ```python
-   file_path = "<your_path_to_data>"
+   file_path = "YOUR FILE PATH"
    patterns, perm_map = ordinal_pattern(stock_data, D=3)  # Embedding dimension
    T_matrix, Direction = Entropy_transfer(patterns, perm_map, delta=1)  # Lag
    ```
